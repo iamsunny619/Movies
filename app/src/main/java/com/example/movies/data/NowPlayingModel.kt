@@ -1,11 +1,11 @@
 package com.example.movies.data
 
 
-import com.google.gson.annotations.SerializedName
 import androidx.annotation.Keep
+import com.google.gson.annotations.SerializedName
 
 @Keep
-data class RunningMovieModel(
+data class NowPlayingModel(
     @SerializedName("dates")
     val dates: Dates,
     @SerializedName("page")
@@ -15,14 +15,14 @@ data class RunningMovieModel(
     @SerializedName("total_pages")
     val totalPages: Int, // 74
     @SerializedName("total_results")
-    val totalResults: Int // 1476
+    val totalResults: Int // 1479
 ) {
     @Keep
     data class Dates(
         @SerializedName("maximum")
-        val maximum: String, // 2020-11-05
+        val maximum: String, // 2020-11-06
         @SerializedName("minimum")
-        val minimum: String // 2020-09-18
+        val minimum: String // 2020-09-19
     )
 
     @Keep
@@ -42,7 +42,7 @@ data class RunningMovieModel(
         @SerializedName("overview")
         val overview: String, // The work of billionaire tech CEO Donovan Chalmers is so valuable that he hires mercenaries to protect it, and a terrorist group kidnaps his daughter just to get it.
         @SerializedName("popularity")
-        val popularity: Double, // 2235.816
+        val popularity: Double, // 2553.431
         @SerializedName("poster_path")
         val posterPath: String, // /ugZW8ocsrfgI95pnQ7wrmKDxIe.jpg
         @SerializedName("release_date")
@@ -52,8 +52,8 @@ data class RunningMovieModel(
         @SerializedName("video")
         val video: Boolean, // false
         @SerializedName("vote_average")
-        val voteAverage: Double, // 4.5
+        val voteAverage: Double, // 4.3
         @SerializedName("vote_count")
-        val voteCount: Int // 34
+        val voteCount: Int // 37
     )
 }

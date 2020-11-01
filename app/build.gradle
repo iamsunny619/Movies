@@ -61,8 +61,8 @@ dependencies {
     implementation "androidx.navigation:navigation-dynamic-features-fragment:$nav_version"
 
     //dagger Hilt
-    implementation "com.google.dagger:hilt-android:2.28.3-alpha"
-    kapt "com.google.dagger:hilt-android-compiler:2.28-alpha"
+    implementation "com.google.dagger:hilt-android:2.28.1-alpha"
+    kapt "com.google.dagger:hilt-android-compiler:2.28.1-alpha"
     implementation 'androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha02'
     kapt 'androidx.hilt:hilt-compiler:1.0.0-alpha02'
 
@@ -75,6 +75,17 @@ dependencies {
 
     // Paging 3
     implementation "androidx.paging:paging-runtime:2.1.2"
+
+
+    //fresco(this is important)
+    //for better images process and memory mange of images
+    implementation 'com.facebook.fresco:fresco:2.2.0'
+
+    //timber for logging
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+
+    //AndroidThreeTen
+    implementation 'com.jakewharton.threetenabp:threetenabp:1.2.4'
 
 
 }

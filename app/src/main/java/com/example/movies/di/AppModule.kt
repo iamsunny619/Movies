@@ -1,7 +1,9 @@
 package com.example.movies.di
 
+import com.example.movies.data.RunningMovieRepository
 import com.example.movies.data.TmdbApi
 import com.example.movies.ui.utils.AppConstant
+import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -21,8 +23,9 @@ object AppModule {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-
     @Provides
     @Singleton
     fun provideTmdbAPi(retrofit: Retrofit): TmdbApi = retrofit.create(TmdbApi::class.java)
+
+
 }

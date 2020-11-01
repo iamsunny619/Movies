@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
@@ -14,8 +15,31 @@
         <TextView
             android:id="@+id/txtDummy"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="running fragment" />
+            android:layout_height="wrap_content"
+            android:text="running fragment"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnFInd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="find"
+            app:layout_constraintTop_toBottomOf="@id/txtDummy" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            tools:listitem="@layout/item_data"
+            tools:itemCount="5"
+            android:nestedScrollingEnabled="false"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnFInd"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

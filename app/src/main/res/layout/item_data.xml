@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.example.movies.ui.utils.BindingAdapters" />
+
+        <variable
+            name="playing"
+            type="com.example.movies.data.NowPlayingModel.Result" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtMovieName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{playing.title.toString()}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="MovieName" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/imgMove"
+            imageUriForFresco="@{playing.posterPath.toString()}"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:adjustViewBounds="true"
+            android:padding="8dp"
+            app:actualImageScaleType="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/txtMovieName"
+            app:layout_constraintTop_toBottomOf="@id/txtMovieName"
+            app:placeholderImageScaleType="fitCenter"
+            tools:srcCompat="@drawable/ic_place_holder" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
