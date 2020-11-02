@@ -6,11 +6,11 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movies.R
-import com.example.movies.data.NowPlayingModel
+import com.example.movies.data.nowplaying.NowPlayingModel
 import com.example.movies.databinding.ItemDataBinding
 
 class RunningMovieaAdapter(
-    items: List<NowPlayingModel.Result>,
+    items: List<NowPlayingModel.Result?>,
     private val itemClick: (view: View, position: Int, nowPlayingModel: NowPlayingModel.Result?) -> Unit
 ) :
     RecyclerView.Adapter<RunningMovieaAdapter.ViewHolder>() {

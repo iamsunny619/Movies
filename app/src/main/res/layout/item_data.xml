@@ -9,7 +9,7 @@
 
         <variable
             name="playing"
-            type="com.example.movies.data.NowPlayingModel.Result" />
+            type="com.example.movies.data.nowplaying.NowPlayingModel.Result" />
 
     </data>
 
