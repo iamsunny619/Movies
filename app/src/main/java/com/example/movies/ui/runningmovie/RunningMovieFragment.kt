@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.DefaultItemAnimator
 import com.example.movies.R
 import com.example.movies.databinding.FragmentRunningMovieBinding
 import com.example.movies.ui.runningmovie.viewmodel.RunningMovieViewModel
+import com.example.movies.ui.utils.Boast
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -43,7 +44,8 @@ class RunningMovieFragment : Fragment() {
     }
 
     private fun setUpRecycler() {
-        runningMovieaAdapter = RunningMovieaAdapter(emptyList()) { _, _, item ->
+        runningMovieaAdapter = RunningMovieaAdapter(emptyList()) { _, positon, item ->
+                Boast.makeText(requireContext(),"position ${positon} and the item name is ${item?.title} and ${item?.id}").show()
 
         }
         bind.rvData.setHasFixedSize(true)
