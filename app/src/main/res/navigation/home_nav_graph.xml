@@ -9,19 +9,5 @@
         android:id="@+id/runningMovieFragment"
         android:name="com.example.movies.ui.runningmovie.RunningMovieFragment"
         android:label="RunningMovieFragment"
-        tools:layout="@layout/fragment_running_movie" >
-        <action
-            android:id="@+id/action_runningMovieFragment_to_detailFragment"
-            app:destination="@id/detailFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/detailFragment"
-        android:name="com.example.movies.ui.runningmovie.detail.DetailFragment"
-        android:label="DetailFragment"
-        tools:layout="@layout/fragment_detail" >
-
-        <argument
-            android:name="movieId"
-            app:argType="string" />
-    </fragment>
+        tools:layout="@layout/fragment_running_movie" />
 </navigation>

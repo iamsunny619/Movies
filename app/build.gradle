@@ -76,7 +76,6 @@ dependencies {
     // Paging 3
     implementation "androidx.paging:paging-runtime:2.1.2"
 
-
     //fresco(this is important)
     //for better images process and memory mange of images
     implementation 'com.facebook.fresco:fresco:2.2.0'
@@ -87,7 +86,11 @@ dependencies {
     //AndroidThreeTen
     implementation 'com.jakewharton.threetenabp:threetenabp:1.2.4'
 
-
+    //pagging
+    def paging_version = "3.0.0-alpha07"
+    implementation "androidx.paging:paging-runtime:$paging_version"
+    // Jetpack Compose Integration
+    implementation "androidx.paging:paging-compose:1.0.0-alpha01"
 }
 
 kapt {
